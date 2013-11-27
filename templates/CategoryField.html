@@ -2,6 +2,7 @@
     <div class="name">Тип категории</div>
     <div class="value no-shift">
         <select name="type_id">
+            <option>Не выбрано</option>
             {foreach $product_types as $id => $type}
             <option {if $category.type_id==$id}selected="selected"{/if} value="{$id}">{$type.name|escape}</option>
             {/foreach}
