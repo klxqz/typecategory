@@ -1,0 +1,13 @@
+<div class="field">
+    <div class="name">Тип категории</div>
+    <div class="value no-shift">
+        <select name="type_id">
+            {foreach $product_types as $id => $type}
+            <option {if $category.type_id==$id}selected="selected"{/if} value="{$id}">{$type.name|escape}</option>
+            {/foreach}
+        </select>
+        <input type="checkbox" name="rec_subcategories" checked="checked"/> - Применять для подкатегорий
+        <span id="typecategory-response"></span>
+
+    </div>
+</div>
